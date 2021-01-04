@@ -7,4 +7,6 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 window.addEventListener('load', (event) => {
   var username = localStorage.getItem("username");
   document.getElementById("name").innerText = "名前：" + username;
+  var moneybank = localStorage.getItem("moneybank");
+  document.getElementById("money").innerText = "お金：" + moneybank + "円";
 });

@@ -12,9 +12,23 @@ window.addEventListener('load', (event) => {
     username = prompt("ユーザ名を指定してください");
     localStorage.setItem("username", username);
   }
+  var money = localStorage.getItem("money");
+  if (money === null || money === "") {
+    money = 1;
+    localStorage.setItem("money", money);
+  }
+  var moneybank = localStorage.getItem("moneybank");
+  if (moneybank === null || moneybank === "") {
+    moneybank = 0;
+    localStorage.setItem("moneybank", moneybank);
+  }
   /** mobile backend に保存する **/
   // スコアのインスタンスを生成
   var nameData = new Name({username: username});
+  var moneyData = new Money({money: money});
+  var moneybankData = new Moneybank({moneybank: moneybank});
   // 送信処理実行
-  nameData.save()
+  nameData.save();
+  moneyDate.save();
+  moneybankDate.save();
 });
