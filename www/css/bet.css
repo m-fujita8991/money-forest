@@ -1,0 +1,10 @@
+body {
+  background-image: url("../img/moneyback.gif");
+  background-size: cover;
+  width : auto;
+}
+
+.br{
+  width: 150px;
+  height: 150px;
+}
