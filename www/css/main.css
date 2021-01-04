@@ -1,0 +1,79 @@
+/* メイン画面用css */
+/* ボディ背景 */
+body {
+  background-size: cover;
+  width: auto;
+}
+/* 木 大きさ */
+.button{
+  width: 150px;
+  height: 170px;
+}
+/* 木 間隔 */
+.wood{
+  margin: 1em;
+}
+/* 上部メニュー */
+.menu{
+  width: 100%;
+  margin: 0;
+}
+/* nameとmoney */
+.menu .name, .menu .money{
+  display: inline-block;
+  background: white;
+  border: solid;
+  border-color: black;
+  width: 50%;
+  margin: 1% 0;
+}
+/* homeボタン */
+.back{
+  position:  absolute;
+  padding:  18px;
+  left:  50%;
+  top: 0;  
+  border-color: yellow;
+  width: 40%;
+  height: 50px;
+  /* クリックしたときの枠線削除 */
+  outline: none;
+}
+/* 下部ボタン */
+.move .gg,.move .bet{
+  width: 45%;
+  height: 40%;
+}
+/* 下部ボタン文字 */
+.move .moji1 {
+  position: absolute;
+  top: 85%;
+  left: 12%;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+}
+.move .moji2 {
+  position: absolute;
+  top: 85%;
+  left: 63%;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+}
+/* ただの背景 */
+.bee {
+  position: absolute;
+  top: 55%;
+  left: 85%;
+  width: 15%;
+  height: 15%;
+}
+/* 動画再生 */
+.play {
+  position: absolute;
+  top: 30%;
+  left: 85%;
+  width: 15%;
+  height: 10%;
+}

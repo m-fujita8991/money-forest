@@ -1,2 +1,12 @@
-/**/
-
+/* tap */
+.main{
+  display: block;
+  margin: 100% auto;
+  width: 45%;
+  height: 10%;
+  font-size: x-large;
+  /* ボタン背景削除 */
+  border:none;
+  background:none;
+  -webkit-appearance:none;
+}
