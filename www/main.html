@@ -1,0 +1,39 @@
+<!-- メイン画面 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- 上部メニュー -->
+  <div class="menu">
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+    <input class="back" type="image" src="img/ui/home.jpg" onclick="history.back()"/>
+  </div>
+  <!-- 木 -->
+  <div class="wood">
+    <input class="button" id="btn0" type="image" onmouseup="fMouseUp(0)"/>
+    <input class="button" id="btn1" type="image" onmouseup="fMouseUp(1)"/>
+    <input class="button" id="btn2" type="image" onmouseup="fMouseUp(2)"/>
+    <input class="button" id="btn3" type="image" onmouseup="fMouseUp(3)"/>
+  </div>
+  <!-- 遷移 -->
+  <div class="move">
+    <input class="gg" id="gg" type="image" src="img/gg/gg1.jpg" onclick="location.href='.html'"/>
+    <p class="moji1">Gacha</p>
+    <input class="bet" id="bet" type="image" src="img/uma/uma1.jpg" onclick="location.href='.html'"/>
+    <p class="moji2">Bet</p>
+  </div>
+  <!-- 動画再生 -->
+  <input class="play" id="play" type="image" src="img/play.jpg" onclick="location.href='.html'"/>
+  <!-- ただの背景 -->
+  <img class="bee" src="img/beee.jpg" />
+  <!-- js -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/datacome.js"></script>
+</body>
+</html>
