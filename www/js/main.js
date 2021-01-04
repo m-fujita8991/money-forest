@@ -1,4 +1,8 @@
 // メイン画面用js
+// APIキー
+var applicationKey = "518d2dcf0793d7e878024bfae55edca66fe98d07f37cef22ea14080c5174b485";
+var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0ab";
+
 // gif
 var gifurl = ["gif/money.gif","gif/bee.gif"];
 // jpg
@@ -70,14 +74,23 @@ switch(month){
 
 // クリックしたときの処理
 function fMouseUp(num) {
+  // データを取得
+  var moneybank = Number(localStorage.getItem("moneybank"));
+  var money = Number(localStorage.getItem("money"));
   // 天国か地獄か
   var rnd = Math.floor( Math.random() * 20 );
   switch(rnd){
-    case 0:
+    case 0: // ハチ
     document.getElementById('btn' + num).src=gifurl[1];
+    moneybank -= 10;
+    document.getElementById("money").innerText = "お金：" + moneybank + "円";
+    localStorage.setItem("moneybank", moneybank);
     break;
-    default:
+    default: // 金
     document.getElementById('btn' + num).src=gifurl[0];
+    moneybank += money;
+    document.getElementById("money").innerText = "お金：" + moneybank + "円";
+    localStorage.setItem("moneybank", moneybank);
   }
   // 2秒表示後、木に戻る
   setTimeout(function(){
