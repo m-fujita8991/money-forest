@@ -6,21 +6,24 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gacha.css">
     <input type="image" src="img/ui/back.jpg" onclick="location.href='main.html'"/>
-    <script>
-    </script>
+    <script type="text/javascript" src="js/gacha.js"></script>
 </head>
 <body>
+<div class="menu">
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+</div>
 <p class="gatyahome">
 <img src="img/gg/gatyahome.jpg">
 </p>	
 <p>ガチャを引きますか？</p>
 <form action="gatyaResult.html">
-  <input id="gatya" type="button" value="ガチャを引く">
+  <input id="gatya" type="button" value="ガチャを引く" onmouseup="gacha(1)">
 </form>
 <form action="gatyaResult.html">
-  <input id="gatya" type="button" value="10連ガチャを引く">
+  <input id="gatya" type="button" value="10連ガチャを引く" onmouseup="gacha(2)">
 </form>
 </body>
 </html>
