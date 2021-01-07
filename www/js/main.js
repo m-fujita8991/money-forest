@@ -88,7 +88,7 @@ function fMouseUp(num) {
     break;
     default: // 金
     document.getElementById('btn' + num).src=gifurl[0];
-    moneybank += 50;
+    moneybank += money;
     document.getElementById("money").innerText = "お金：" + moneybank + "円";
     localStorage.setItem("moneybank", moneybank);
   }
