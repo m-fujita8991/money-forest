@@ -78,7 +78,7 @@ function fMouseUp(num) {
   var moneybank = Number(localStorage.getItem("moneybank"));
   var money = Number(localStorage.getItem("money"));
   // 天国か地獄か
-  var rnd = Math.floor( Math.random() * 20 );
+  var rnd = Math.floor( Math.random() * 33 );
   switch(rnd){
     case 0: // ハチ
     document.getElementById('btn' + num).src=gifurl[1];
