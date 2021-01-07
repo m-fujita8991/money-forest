@@ -5,23 +5,24 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 // SDKの初期化
 var ncmb = new NCMB(applicationKey, clientKey);
 
-// 名前登録
+// 初期設定
 window.addEventListener('load', (event) => {
   var username = localStorage.getItem("username");
-  if (username === null || username === "") {
-    username = prompt("ユーザ名を指定してください");
-    localStorage.setItem("username", username);
-  }
   var money = localStorage.getItem("money");
-  if (money === null || money === "") {
-    money = 1;
-    localStorage.setItem("money", money);
-  }
   var moneybank = localStorage.getItem("moneybank");
-  if (moneybank === null || moneybank === "") {
+  if (username === null || username === "") {
+    // 名前登録
+    username = prompt("ユーザ名を指定してください");
+    // タップ時の金額設定
+    money = 1;
+    // 貯金設定
     moneybank = 0;
+    
+    localStorage.setItem("username", username);
+    localStorage.setItem("money", money);
     localStorage.setItem("moneybank", moneybank);
   }
+  
   /** mobile backend に保存する **/
   // スコアのインスタンスを生成
   var nameData = new Name({username: username});
