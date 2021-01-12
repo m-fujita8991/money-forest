@@ -1,5 +1,5 @@
 body {
-  background-image: url("../img/moneyback.gif");
+  background-image: url("../img/bet/moneyback.gif");
   background-size: cover;
   width : auto;
 }
@@ -7,4 +7,13 @@ body {
 .br{
   width: 150px;
   height: 150px;
+}
+
+.menu .name, .menu .money{
+  display: inline-block;
+  background: white;
+  border: solid;
+  border-color: black;
+  width: 50%;
+  margin: 1% 0;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <input type="image" src="img/ui/back.jpg" onclick="location.href='bet.html'"/>
+    <script src="components/loader.js"></script>
+    <script type="text/javascript" src="js/datacome.js"></script>
+    <script src="js/chohan.js"></script>
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head>
+<body>
+  <div class="menu">
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+</div>
+  <label>丁半ゲーム</label>
+  <img src="img/chohan/dice.png">
+  <br>
+  <label>かける金額を選べ！</label>
+  <br>
+  <input type="button" value="1円" onclick="Bet(1,this)" class="betm" id="bt1" style="height:40px;width:100px">
+  <input type="button" value="10円" onclick="Bet(10,this)" class="betm" id="bt2" style="height:40px;width:100px">
+  <input type="button" value="100円" onclick="Bet(100,this)" cla
+  ss="betm" id="bt3" style="height:40px;width:100px">
+  <br>
+  <br>
+  <input type="button" value="丁" onclick="Play(true)" style="width:150px;height:150px">
+  <input type="button" value="半" onclick="Play(false)"style="width:150px;height:150px">
+</body>
+</html>
