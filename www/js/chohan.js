@@ -1,5 +1,9 @@
 var bet = 0;
 function Bet(ibet,obj){
+  var moneybank = Number(localStorage.getItem("moneybank"));
+  moneybank = 100000;
+  localStorage.setItem("moneybank", moneybank);
+    document.getElementById("money").innerText = "お金：" + moneybank + "円";
   bt1 = document.getElementById("bt1");
   bt2 = document.getElementById("bt2");
   bt3 = document.getElementById("bt3");
@@ -19,12 +23,27 @@ function Play(chohan){
   }
   else{
     var dice1 = Math.floor( Math.random() * 6 ) + 1;
-    var dice2 = Math.floor( Math.random() * 6 ) + 1
+    var dice2 = Math.floor( Math.random() * 6 ) + 1;
+    var gm = 0;
+    switch(bet){
+      case 1:
+        for(var i = 0;i<4;i++){
+          gm +=  Math.floor( Math.random() * 3 ) -1;
+        }
+      case 10:
+        for(var i = 0;i<4;i++){
+          gm +=  Math.floor( Math.random() * 31) -15;
+        }
+      case 100:
+         for(var i = 0;i<4;i++){
+          gm +=  Math.floor( Math.random() * 301) -150;
+        }
+    } 
     var dicesum = dice1 + dice2;
     if(dicesum % 2 == 0){
       if(chohan == true){
-        moneybank = moneybank + bet * 4;
-        text = "かけたのは丁！結果は丁！" + bet * 4 +"円獲得！"
+        moneybank = moneybank + bet * gm;
+        text = "かけたのは丁！結果は丁！" + gm +"円獲得！"
       }
       else{
         moneybank = moneybank - bet;
@@ -37,8 +56,8 @@ function Play(chohan){
         text ="かけたのは丁！結果は半！残念！"
       }
       else{
-        moneybank = moneybank + bet * 4;
-        text = "かけたのは半！結果は半！" + bet * 4 + "円獲得！"
+        moneybank = moneybank + gm;
+        text = "かけたのは半！結果は半！" + gm + "円獲得！"
       }
     }
     alert(text);
