@@ -1,4 +1,10 @@
 /* This is a CSS file */
+body{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("/img/gg/backimage.png")center / cover;
+}
 div.gatyahome img{
   width: 350px;
   margin: 0 auto;
@@ -11,4 +17,12 @@ div.gatyahome img{
   border-color: black;
   width: 50%;
   margin: 1% 0;
+}
+h1{
+  font-size: 30px;
+  color: yellow;
+  text-align: center;
+}
+div.b{
+  margin: 0 auto;
 }
