@@ -64,7 +64,12 @@ function Play(chohan){
       }
     }
     alert(text);
-     localStorage.setItem("moneybank", moneybank);
+    var ac = Math.floor( Math.random() * 100) + 1;
+    if(ac < 20){
+      moneybank = 0;
+      alert("スリにあった！所持金0円！");
+    }
+    localStorage.setItem("moneybank", moneybank);
     document.getElementById("money").innerText = "お金：" + moneybank + "円";
     bet = 0;
     var bt1 = document.getElementById("bt1");
