@@ -4,7 +4,16 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 // SDKの初期化
 var ncmb = new NCMB(applicationKey, clientKey);
 
+//ガチャ景品
 var gItem = ["タップ金+1","初期化","景品3","景品4","景品5"];
+
+//結果ボタン挿入
+var btn = function(){
+  document.getElementById("rslt").innerHTML='<input type="button" value="結果を見る" onmouseup="result()">';
+}
+
+var r;
+var item;
 
 function gacha(type){
   // データを取得
@@ -16,24 +25,26 @@ function gacha(type){
       moneybank -= 5;
       document.getElementById("money").innerText = "お金：" + moneybank + "円";
       localStorage.setItem("moneybank", moneybank);
-      var rnd = Math.floor( Math.random() * 4 );
+      PlaySound();
+      setTimeout(btn,6000);//6秒後にボタン表示
+      var rnd = Math.floor( Math.random() * 5 );//乱数生成
       switch(rnd){
         case 0:
-        alert(gItem[rnd]+"を入手しました");
+        r = gItem[rnd];
         moneyUp();
         break;
         case 1:
-        alert(gItem[rnd]+"を入手しました");
+        r = gItem[rnd];
         Initialize();
         break;
         case 2:
-        alert(gItem[rnd]+"を入手しました");
+        r = gItem[rnd];
         break;
         case 3:
-        alert(gItem[rnd]+"を入手しました");
+        r = gItem[rnd];
         break;
         default:
-        alert(gItem[rnd]+"を入手しました");
+        r = gItem[rnd];
       }
       break;
     }else{
@@ -45,9 +56,11 @@ function gacha(type){
       moneybank -= 50;
       document.getElementById("money").innerText = "お金：" + moneybank + "円";
       localStorage.setItem("moneybank", moneybank);
-      var item = [];
+      PlaySound();
+      setTimeout(btn,6000);//6秒後にボタン表示
+      item = [];
       for(var i = 0;i<=9;i++){
-        var rnd = Math.floor( Math.random() * 4 );
+        var rnd = Math.floor( Math.random() * 5 );//乱数生成
         switch(rnd){
         case 0:
         item.push(gItem[rnd]);
@@ -67,19 +80,32 @@ function gacha(type){
         item.push(gItem[rnd]);
       }
       }
-      alert(item);
+      r = item;
     }else{
       alert("お金が足りません");
     }
   }
 }
+//タップ金＋１
 function moneyUp(){
 var money = Number(localStorage.getItem("money"));
         money += 1;
         localStorage.setItem("money", money);
 }
+//初期化
 function Initialize(){
 var money = Number(localStorage.getItem("money"));
         money = 1;
         localStorage.setItem("money", money);
+}
+//ガチャ音
+function PlaySound() {
+      audioElem = new Audio();
+      audioElem.src = "mp3/spo_ge_gatyagatya01.mp3";
+      audioElem.play();
+    }
+//ガチャ結果
+function result(){
+  alert(r+"を入手しました");
+  document.getElementById("rslt").innerHTML="";//ボタン消す
 }
