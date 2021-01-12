@@ -25,12 +25,13 @@
   <br>
   <label>かける金額を選べ！</label>
   <br>
-  <input type="button" value="1円" onclick="Bet(1,this)">
-  <input type="button" value="10円" onclick="Bet(10,this)">
-  <input type="button" value="100円" onclick="Bet(100,this)">
+  <input type="button" value="1円" onclick="Bet(1,this)" class="betm" id="bt1" style="height:40px;width:100px">
+  <input type="button" value="10円" onclick="Bet(10,this)" class="betm" id="bt2" style="height:40px;width:100px">
+  <input type="button" value="100円" onclick="Bet(100,this)" cla
+  ss="betm" id="bt3" style="height:40px;width:100px">
   <br>
-  <label id="bt" >0000</label>
   <br>
-  <input type="submit" value="始める">
+  <input type="button" value="丁" onclick="Play(true)" style="width:150px;height:150px">
+  <input type="button" value="半" onclick="Play(false)"style="width:150px;height:150px">
 </body>
 </html>
