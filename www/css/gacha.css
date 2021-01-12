@@ -1,6 +1,7 @@
 /* This is a CSS file */
-p.gatyahome img{
+div.gatyahome img{
   width: 350px;
+  margin: 0 auto;
 }
 /* nameとmoney */
 .menu .name, .menu .money{
