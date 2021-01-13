@@ -42,9 +42,7 @@ function Play(chohan){
         }
         break;
     }
-    alert(gm);
     var dicesum = dice1 + dice2;
-    alert(moneybank);
     if(dicesum % 2 == 0){
       if(chohan == true){
         moneybank = moneybank + bet * gm;
@@ -66,11 +64,10 @@ function Play(chohan){
       }
     }
     alert(text);
-    alert(moneybank);
     var ac = Math.floor( Math.random() * 100) + 1;
     if(ac < 20){
-      moneybank = 0;
       alert("スリにあった！所持金0円！");
+      moneybank = 0;
     }
     localStorage.setItem("moneybank", moneybank);
     document.getElementById("money").innerText = "お金：" + moneybank + "円";
