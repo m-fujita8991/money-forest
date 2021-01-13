@@ -1,0 +1,7 @@
+/* This is a CSS file */
+
+body {
+  background-image: url("../img/chohan/chohanback.png");
+  background-size: cover;
+  width : auto;
+}
