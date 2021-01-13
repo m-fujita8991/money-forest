@@ -41,8 +41,10 @@ function Play(chohan){
           gm +=  Math.floor( Math.random() * 101) + 50;
         }
         break;
-    } 
+    }
+    alert(gm);
     var dicesum = dice1 + dice2;
+    alert(moneybank);
     if(dicesum % 2 == 0){
       if(chohan == true){
         moneybank = moneybank + bet * gm;
@@ -64,6 +66,7 @@ function Play(chohan){
       }
     }
     alert(text);
+    alert(moneybank);
     var ac = Math.floor( Math.random() * 100) + 1;
     if(ac < 20){
       moneybank = 0;
