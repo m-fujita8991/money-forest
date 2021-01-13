@@ -4,14 +4,28 @@
   top: 10%;
   left: 25%;
   width: 50%;
-  height: 25%;
+  height: auto;
+}
+
+/* title */
+.title{
+  position: absolute;
+  top: 40%;
+  left: 27%;
+  width: 45%;
+  height: 10%;
+  font-size: x-large;
+  /* ボタン背景削除 */
+  border:none;
+  background:none;
+  -webkit-appearance:none;
 }
 
 /* tap */
 .main{
   position: absolute;
   top: 60%;
-  left: 30%;
+  left: 27%;
   width: 45%;
   height: 10%;
   font-size: x-large;
