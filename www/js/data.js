@@ -10,6 +10,7 @@ window.addEventListener('load', (event) => {
   var username = localStorage.getItem("username");
   var money = localStorage.getItem("money");
   var moneybank = localStorage.getItem("moneybank");
+  var hachi = localStorage.getItem("hachi");
   if (username === null || username === "") {
     // 名前登録
     username = prompt("ユーザ名を指定してください");
@@ -17,10 +18,13 @@ window.addEventListener('load', (event) => {
     money = 1;
     // 貯金設定
     moneybank = 0;
+    // ハチ
+    hachi = 10;
     
     localStorage.setItem("username", username);
     localStorage.setItem("money", money);
     localStorage.setItem("moneybank", moneybank);
+    localStorage.setItem("hachi", hachi);
   }
   
   /** mobile backend に保存する **/
@@ -28,8 +32,10 @@ window.addEventListener('load', (event) => {
   var nameData = new Name({username: username});
   var moneyData = new Money({money: money});
   var moneybankData = new Moneybank({moneybank: moneybank});
+  var hachiData = new Hachi({hachi: hachi});
   // 送信処理実行
   nameData.save();
   moneyDate.save();
   moneybankDate.save();
+  hachiDate.save();
 });
