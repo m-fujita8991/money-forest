@@ -77,12 +77,13 @@ function fMouseUp(num) {
   // データを取得
   var moneybank = Number(localStorage.getItem("moneybank"));
   var money = Number(localStorage.getItem("money"));
+  var hachi = Number(localStorage.getItem("hachi"));
   // 天国か地獄か
   var rnd = Math.floor( Math.random() * 33 );
   switch(rnd){
     case 0: // ハチ
     document.getElementById('btn' + num).src=gifurl[1];
-    moneybank -= 10;
+    moneybank -= hachi;
     document.getElementById("money").innerText = "お金：" + moneybank + "円";
     localStorage.setItem("moneybank", moneybank);
     break;
