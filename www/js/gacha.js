@@ -5,7 +5,7 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 var ncmb = new NCMB(applicationKey, clientKey);
 
 //ガチャ景品
-var gItem = ["タップ金+1","初期化","ハチ-1","景品4","景品5"];
+var gItem = ["タップ金+1","初期化","ハチ-1","掛け金割引","タップ金+2"];
 
 
 //結果ボタン挿入
@@ -52,6 +52,7 @@ function gacha(type){
         break;
         default:
         r = gItem[rnd];
+        moneyup2();
       }
       break;
     }else{
@@ -90,6 +91,7 @@ function gacha(type){
         break;
         default:
         item.push(gItem[rnd]);
+        moneyup2();
       }
       }
       r = item;
@@ -119,7 +121,14 @@ var hachi = Number(localStorage.getItem("hachi"));
 if(hachi>0){
   hachi -= 1;
   localStorage.setItem("hachi",hachi);
-}  
+}
+}
+//タップ金＋2
+function moneyup2(){
+var money = Number(localStorage.getItem("money"));
+        money += 1;
+        localStorage.setItem("money", money);
+  
 }
 //ガチャ音
 function PlaySound() {
