@@ -1,0 +1,43 @@
+body {
+  background-image: url("../img/keiba/keibaback.png");
+  background-size: cover;
+  width : auto;
+}
+
+.horse{
+ display: inline-block;
+  background: white;
+  border: solid;
+  border-color: black;
+  width: 70%;
+  height: 80%;
+  margin: 2% 0;
+}
+
+#sel{
+  font-size: 40px;
+}
+
+#aa,#kb{
+  font-size: 30px;
+}
+
+#betmoney,#sub{
+  font-size: 40px;
+}
+
+.seclab{
+  font-size: 28px;
+  display: inline-block;
+  background: white;
+  border: solid;
+  border-color: black;
+  width: 100%;
+  height: 80%;
+  margin: 2% 0;
+}
+
+#keibaresult,#kb{
+  width: 360px;
+  height: 100px;
+}
