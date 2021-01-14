@@ -6,6 +6,9 @@ var time = Number(localStorage.getItem("time"));
 
 setInterval(function(){
   // 現在時刻の取得
-  time = new Date();
+  var a = new Date();
+  time = a.getDate();
+  time2 = a.getHours();
   localStorage.setItem("time", time);
-},1000);
+  localStorage.setItem("time2", time2);
+},60000);
