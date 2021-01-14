@@ -9,6 +9,11 @@ div.gatyahome img{
   width: 350px;
   margin: 0 auto;
 }
+/* 上部メニュー */
+.menu{
+  width: 100%;
+  margin: 0;
+}
 /* nameとmoney */
 .menu .name, .menu .money{
   display: inline-block;
@@ -17,6 +22,18 @@ div.gatyahome img{
   border-color: black;
   width: 50%;
   margin: 1% 0;
+}
+/* homeボタン */
+.back{
+  position:  absolute;
+  padding:  18px;
+  left:  50%;
+  top: 0;  
+  border-color: yellow;
+  width: 40%;
+  height: 50px;
+  /* クリックしたときの枠線削除 */
+  outline: none;
 }
 h1{
   font-size: 30px;

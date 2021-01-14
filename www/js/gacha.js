@@ -5,7 +5,11 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 var ncmb = new NCMB(applicationKey, clientKey);
 
 //ガチャ景品
+
 var gItem = ["タップ金+1","初期化","ハチ-1","掛け金割引","タップ金+2"];
+
+var gItem = ["タップ金+1","初期化","ハチ-1"];
+
 
 
 //結果ボタン挿入
@@ -33,7 +37,7 @@ function gacha(type){
       var gatya2 = document.getElementById("gatya2");
       gatya1.disabled = true;
       gatya2.disabled = true;
-      var rnd = Math.floor( Math.random() * 5 );//乱数生成
+      var rnd = Math.floor( Math.random() * 3 );//乱数生成
       switch(rnd){
         case 0:
         r = gItem[rnd];
@@ -47,12 +51,14 @@ function gacha(type){
         r = gItem[rnd];
         honey();
         break;
+
         case 3:
         r = gItem[rnd];
         break;
         default:
         r = gItem[rnd];
         moneyup2();
+
       }
       break;
     }else{
@@ -72,7 +78,7 @@ function gacha(type){
       setTimeout(btn,6000);//6秒後にボタン表示
       item = [];
       for(var i = 0;i<=9;i++){
-        var rnd = Math.floor( Math.random() * 5 );//乱数生成
+        var rnd = Math.floor( Math.random() * 3 );//乱数生成
         switch(rnd){
         case 0:
         item.push(gItem[rnd]);
@@ -86,12 +92,14 @@ function gacha(type){
         item.push(gItem[rnd]);
         honey();
         break;
+
         case 3:
         item.push(gItem[rnd]);
         break;
         default:
         item.push(gItem[rnd]);
         moneyup2();
+
       }
       }
       r = item;
