@@ -1,6 +1,6 @@
 /* This is a CSS file */
 body{
-  position: relative;
+position: relative;
   width: 100%;
   min-height: 100vh;
   background: url("/img/gg/backimage.png")center / cover;
@@ -8,6 +8,11 @@ body{
 div.gatyahome img{
   width: 350px;
   margin: 0 auto;
+}
+/* 上部メニュー */
+.menu{
+  width: 100%;
+  margin: 0;
 }
 /* nameとmoney */
 .menu .name, .menu .money{
@@ -18,6 +23,18 @@ div.gatyahome img{
   width: 50%;
   margin: 1% 0;
 }
+/* homeボタン */
+.back{
+  position:  absolute;
+  padding:  18px;
+  left:  50%;
+  top: 0;  
+  border-color: yellow;
+  width: 40%;
+  height: 50px;
+  /* クリックしたときの枠線削除 */
+  outline: none;
+}
 h1{
   font-size: 30px;
   color: yellow;
@@ -25,4 +42,7 @@ h1{
 }
 div.b{
   margin: 0 auto;
+}
+div.rslt{
+  text-align: center;
 }

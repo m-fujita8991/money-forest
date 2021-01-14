@@ -7,26 +7,27 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/gacha.css">
-    <input type="image" src="img/ui/back.jpg" onclick="location.href='main.html'"/>
     <script type="text/javascript" src="js/gacha.js"></script>
     <script type="text/javascript" src="js/datacome.js"></script>
+    <script type="text/javascript" src="js/off.js"></script>
 </head>
 <body>
 <div class="menu">
     <label class="name" id="name" >名前</label>
     <label class="money" id="money" >お金</label>
+    <input class="back" type="image" src="img/ui/back.jpg" onclick="location.href='main.html'"/>
 </div>
 <div class="gatyahome">
 <img id="ghome" src="img/gg/gachagacha_5299.png">
 </div>
-<div id=rslt></div>	
+<div id="rslt"></div>	
 <h1>ガチャを引きますか？</h1>
 <div class="b">
 <form action="gatyaResult.html">
-  <input id="gatya" type="button" value="ガチャを引く" onmouseup="gacha(1)" style="margin: 0px; float: left;">
+  <input id="gatya1" type="button" value="ガチャを引く" onmouseup="gacha(1)" style="margin: 0px; float: left;">
 </form>
 <form action="gatyaResult.html">
-  <input id="gatya" type="button" value="10連ガチャを引く" onmouseup="gacha(2)"style="margin: 0px; float: left;">
+  <input id="gatya2" type="button" value="10連ガチャを引く" onmouseup="gacha(2)"style="margin: 0px; float: left;">
 </form>
 </div>
 </body>
