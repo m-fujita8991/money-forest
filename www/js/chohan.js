@@ -71,7 +71,7 @@ function Play(chohan){
     localStorage.setItem("moneybank", moneybank);
     alert(text);
     var ac = Math.floor( Math.random() * 100) + 1;
-    if(ac < 20){
+    if(ac < 10){
       alert("スリにあった！所持金0円！");
       moneybank = 0;
       localStorage.setItem("moneybank", moneybank);

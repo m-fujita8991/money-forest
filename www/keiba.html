@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <input type="image" src="img/ui/back.jpg" onclick="location.href='bet.html'"/ id="firstbtn">
+    <script src="js/keiba.js"></script>
+    <link rel="stylesheet" href="css/keiba.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/datacome.js"></script>
+</head>
+<body>
+  <div class="menu">
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+  </div>
+  <div id="first">
+  <form method="GET" action="keibaresult.html" id="hb">
+    <label id="sel" class="tex">一位を予想しろ！</label><br>
+    <label class="horse"><input type="radio" name="uma" value="0" checked>ジモトダケサラブレッド</label><br>
+    <label class="horse"><input type="radio" name="uma" value="1">タダノウマ</label><br>
+    <label class="horse"><input type="radio" name="uma" value="2">デオチインパクト</label><br>
+    <label class="horse"><input type="radio" name="uma" value="3">クサッタミカン</label><br>
+    <label class="horse"><input type="radio" name="uma" value="4">クロワッサン</label><br>
+    <label id="aa" class="tex">かける金額を入力しろ！</label><br>
+    <input type="text" placeholder="10000~" id="betmoney" style="width:300px">
+    <br><br>
+    <input type="button"  value="レース開始！" style="width:300px;height:100px" id="sub">
+    </form>
+  </div>
+  <div id="second" hidden>
+    <img src="img/keiba/keibaresult.png" id="keibaresult">
+    <label id="res1" class="seclab" >1</label><br>
+    <label id="res2" class="seclab">2</label><br>
+    <label id="res3" class="seclab">3</label><br>
+    <label id="res4" class="seclab">4</label><br>
+    <label id="res5" class="seclab">5</label><br>
+  </div><br>
+  <input type="button" id="kb" hidden onclick="location.href='bet.html'" value="賭博選択画面に戻る">
+</body>
+</html>
