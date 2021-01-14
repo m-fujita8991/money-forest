@@ -26,6 +26,19 @@ window.addEventListener('load', (event) => {
     localStorage.setItem("moneybank", moneybank);
     localStorage.setItem("hachi", hachi);
   }
+
+  //オフライン処理
+  var time = Number(localStorage.getItem("time"));
+  var start_time = Date.now();
+  var end_time = time;
+  if(end_time.getTime != null){
+    var off_time = start_time.getTime() - end_time.getTime();
+    var secs = off_time * 3600;
+    if(secs >= 5){
+      moneybank += 10;
+      localStorage.setItem("moneybank", moneybank);
+    }
+  }
   
   /** mobile backend に保存する **/
   // スコアのインスタンスを生成
@@ -33,9 +46,12 @@ window.addEventListener('load', (event) => {
   var moneyData = new Money({money: money});
   var moneybankData = new Moneybank({moneybank: moneybank});
   var hachiData = new Hachi({hachi: hachi});
+  var timeDate = new Time({time: time});
+
   // 送信処理実行
   nameData.save();
   moneyDate.save();
   moneybankDate.save();
   hachiDate.save();
+  timeDate.save();
 });
