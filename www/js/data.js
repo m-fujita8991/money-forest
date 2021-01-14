@@ -27,7 +27,7 @@ window.addEventListener('load', (event) => {
     localStorage.setItem("hachi", hachi);
   }
   
-  var moneybank = localStorage.getItem("moneybank");
+  var moneybank = Number(localStorage.getItem("moneybank"));
     var time = localStorage.getItem("time");
     var time2 = localStorage.getItem("time2");
     var start = new Date();
