@@ -1,9 +1,8 @@
 /* This is a CSS file */
 body{
-position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: url("/img/gg/backimage.png")center / cover;
+background-image: url("../img/gg/backimage.png");
+  background-size: cover;
+  width : auto;
 }
 div.gatyahome img{
   width: 350px;

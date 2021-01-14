@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/off.js"></script>
     <script src="js/data.js"></script>
 </head>
 <body>
@@ -16,6 +17,6 @@
   <!-- タイトル -->
   <input class="title" style="border:0;background-color:#ffffff;color:#000000;" type="button" onclick="location.href='main.html'" value="札束の森">
   <!-- メイン画面に遷移 -->
-  <input class="main" style="border:0;background-color:#ffffff;color:#000000;" type="button" onclick="location.href='main.html'" value="Tap to Start">
+  <input class="main" style="border:0;background-color:#ffffff;color:#000000;" type="button" onclick="location.href='main.html'" value="Tap to Start" onmouseup="off(0)">
 </body>
 </html>
