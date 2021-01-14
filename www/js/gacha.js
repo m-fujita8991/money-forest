@@ -63,6 +63,9 @@ function gacha(type){
       moneybank -= 50;
       document.getElementById("money").innerText = "お金：" + moneybank + "円";
       localStorage.setItem("moneybank", moneybank);
+      var gatya1 = document.getElementById("gatya1");
+      var gatya2 = document.getElementById("gatya2");
+      gatya1.disabled = true;
       gatya2.disabled = true;
       PlaySound();
       setTimeout(btn,6000);//6秒後にボタン表示
