@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="components/loader.css">
-    <script src="components/loader.js"></script>
     <input type="image" src="img/ui/back.jpg" onclick="location.href='bet.html'"/>
-    <link rel="stylesheet" href="css/pachi.css">
-    <link rel="stylesheet" href="css/main.css">
+    <script src="components/loader.js"></script>
     <script type="text/javascript" src="js/datacome.js"></script>
-    <script type="text/javascript" src="js/pachi.js">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/pachi.js"></script>
+    <link rel="stylesheet" href="css/pachi.css">
 </head>
 <body>
   <div class="menu">
-  <label class="name" id="name" >名前</label>
-  <label class="money" id="money" >お金</label>
-  </div>
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+    </div>
+    <br><br><br>
   <table>
         <tr>
           <td><img src="img/pachi/seven.jpg" class="rell" id="rell1"></td>
@@ -24,12 +25,13 @@
           <td><img src="img/pachi/seven.jpg" class="rell" id="rell3"></td>
         </tr>
         <tr>
-          <td align="center"><input type="button" id="btn1" value="1" class="rell" disabled="true" onclick="Stop(1,this)"></td>
-          <td align="center"><input type="button" id="btn2" value="2" class="rell" disabled="true" onclick="Stop(2,this)"></td>
-          <td align="center"><input type="button" id="btn3" value="3" class="rell" disabled="true" onclick="Stop(3,this)"></td>
+          <td align="center"><input type="button" id="btn1" value="1" class="rell" disabled="true"></td>
+          <td align="center"><input type="button" id="btn2" value="2" class="rell" disabled="true"></td>
+          <td align="center"><input type="button" id="btn3" value="3" class="rell" disabled="true"></td>
         </tr>
       </table>
-      <input type="button" id="startbtn" value="start" onclick="Pray()">
+      <br><br><br>
+      <input type="button" id="startbtn" value="start" style="width:350px;height:150px;">
 </body>
 <audio id="startbgm" preload="loop">
   <source src="sound/pachi/start.mp3" type="audio/mp3">
