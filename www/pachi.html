@@ -6,14 +6,53 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="components/loader.css">
     <script src="components/loader.js"></script>
-    <script>
-        //
-        // TODO: Write JavaScript code here
-        //
-    </script>
+    <input type="image" src="img/ui/back.jpg" onclick="location.href='bet.html'"/>
+    <link rel="stylesheet" href="css/pachi.css">
+    <link rel="stylesheet" href="css/main.css">    <script type="text/javascript" src="js/datacome.js"></script>
+    <script type="text/javascript" src="js/pachi.js">
 </head>
 <body>
-  <img height="300" width="300">
-  <a href="gammain.html"><input type="button" value="戻る"></a>
+  <div class="menu">
+    <label class="name" id="name" >名前</label>
+    <label class="money" id="money" >お金</label>
+  </div>
+  <table>
+        <tr>
+          <td><img src="img/pachi/jack.jpg" class="rell" id="rell1"></td>
+          <td><img src="img/pachi/jack.jpg" class="rell" id="rell2"></td>
+          <td><img src="img/pachi/jack.jpg" class="rell" id="rell3"></td>
+        </tr>
+        <tr>
+          <td><img src="img/pachi/seven.jpg" class="rell" id="rell4"></td>
+          <td><img src="img/pachi/seven.jpg" class="rell" id="rell5"></td>
+          <td><img src="img/pachi/seven.jpg" class="rell" id="rell6"></td>
+        </tr>
+        <tr>
+          <td><img src="img/pachi/bell.jpg" class="rell" id="rell7"></td>
+          <td><img src="img/pachi/bell.jpg" class="rell" id="rell8"></td>
+          <td><img src="img/pachi/bell.jpg" class="rell" id="rell9"></td>
+        </tr>
+        <tr>
+          <td align="center"><input type="button" id="btn1" value="1" class="rell" disabled="true"></td>
+          <td align="center"><input type="button" id="btn2" value="2" class="rell" disabled="true"></td>
+          <td align="center"><input type="button" id="btn3" value="3" class="rell" disabled="true"></td>
+        </tr>
+      </table>
+      <input type="button" id="startbtn" value="start">
 </body>
+<audio id="startbgm" preload="loop">
+  <source src="sound/pachi/start.mp3" type="audio/mp3">
+</audio>
+<audio id="stopbgm1" preload="loop">
+  <source src="sound/pachi/stop.mp3" type="audio/mp3">
+</audio>
+<audio id="stopbgm2" preload="loop">
+  <source src="sound/pachi/stop.mp3" type="audio/mp3">
+</audio>
+<audio id="stopbgm3" preload="loop">
+  <source src="sound/pachi/stop.mp3" type="audio/mp3">
+</audio>
+<audio id="hitse" preload="loop">
+  <source src="sound/pachi/hitse.mp3" type="audio/mp3">
+</audio>
 </html>

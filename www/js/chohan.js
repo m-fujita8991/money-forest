@@ -42,12 +42,10 @@ function Play(chohan){
         }
         break;
     }
-    alert(gm);
     var dicesum = dice1 + dice2;
-    alert(moneybank);
     if(dicesum % 2 == 0){
       if(chohan == true){
-        moneybank = moneybank + bet * gm;
+        moneybank = moneybank + gm;
         text = "かけたのは丁！結果は丁！" + gm +"円獲得！"
       }
       else{
@@ -65,21 +63,19 @@ function Play(chohan){
         text = "かけたのは半！結果は半！" + gm + "円獲得！"
       }
     }
+    localStorage.setItem("moneybank", moneybank);
     alert(text);
-    alert(moneybank);
     var ac = Math.floor( Math.random() * 100) + 1;
     if(ac < 20){
-      moneybank = 0;
       alert("スリにあった！所持金0円！");
+      moneybank = 0;
+      localStorage.setItem("moneybank", moneybank);
     }
-    localStorage.setItem("moneybank", moneybank);
     document.getElementById("money").innerText = "お金：" + moneybank + "円";
     bet = 0;
     var bt1 = document.getElementById("bt1");
     var bt2 = document.getElementById("bt2");
     var bt3 = document.getElementById("bt3"); 
-    bt1.disabled = false;
-    bt2.disabled = false;
-    bt3.disabled = false;
+    bt1.disabled = bt2.disabled = bt3.disabled = false;
   }
 }
