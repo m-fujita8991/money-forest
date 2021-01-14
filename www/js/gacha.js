@@ -5,12 +5,14 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 var ncmb = new NCMB(applicationKey, clientKey);
 
 //ガチャ景品
-var gItem = ["タップ金+1","初期化","景品3","景品4","景品5"];
+var gItem = ["タップ金+1","初期化","ハチ-1","景品4","景品5"];
+
 
 //結果ボタン挿入
 var btn = function(){
   document.getElementById("rslt").innerHTML='<input type="button" value="結果を見る" onmouseup="result()">';
 }
+
 
 var r;
 var item;
@@ -27,6 +29,10 @@ function gacha(type){
       localStorage.setItem("moneybank", moneybank);
       PlaySound();
       setTimeout(btn,6000);//6秒後にボタン表示
+      var gatya1 = document.getElementById("gatya1");
+      var gatya2 = document.getElementById("gatya2");
+      gatya1.disabled = true;
+      gatya2.disabled = true;
       var rnd = Math.floor( Math.random() * 5 );//乱数生成
       switch(rnd){
         case 0:
@@ -39,6 +45,7 @@ function gacha(type){
         break;
         case 2:
         r = gItem[rnd];
+        honey();
         break;
         case 3:
         r = gItem[rnd];
@@ -56,6 +63,10 @@ function gacha(type){
       moneybank -= 50;
       document.getElementById("money").innerText = "お金：" + moneybank + "円";
       localStorage.setItem("moneybank", moneybank);
+      var gatya1 = document.getElementById("gatya1");
+      var gatya2 = document.getElementById("gatya2");
+      gatya1.disabled = true;
+      gatya2.disabled = true;
       PlaySound();
       setTimeout(btn,6000);//6秒後にボタン表示
       item = [];
@@ -72,6 +83,7 @@ function gacha(type){
         break;
         case 2:
         item.push(gItem[rnd]);
+        honey();
         break;
         case 3:
         item.push(gItem[rnd]);
@@ -95,8 +107,19 @@ var money = Number(localStorage.getItem("money"));
 //初期化
 function Initialize(){
 var money = Number(localStorage.getItem("money"));
+var hachi = Number(localStorage.getItem("hachi"));
         money = 1;
+        hachi = 10;
         localStorage.setItem("money", money);
+        localStorage.setItem("hachi",hachi);
+}
+//ハチ－１
+function honey(){
+var hachi = Number(localStorage.getItem("hachi"));
+if(hachi>0){
+  hachi -= 1;
+  localStorage.setItem("hachi",hachi);
+}  
 }
 //ガチャ音
 function PlaySound() {
@@ -108,4 +131,8 @@ function PlaySound() {
 function result(){
   alert(r+"を入手しました");
   document.getElementById("rslt").innerHTML="";//ボタン消す
+  var gatya1 = document.getElementById("gatya1");
+  var gatya2 = document.getElementById("gatya2");
+  gatya1.disabled = false;
+  gatya2.disabled = false;
 }

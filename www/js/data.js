@@ -50,8 +50,8 @@ window.addEventListener('load', (event) => {
 
   // 送信処理実行
   nameData.save();
-  moneyDate.save();
-  moneybankDate.save();
-  hachiDate.save();
+  moneyData.save();
+  moneybankData.save();
+  hachiData.save();
   timeDate.save();
 });

@@ -1,6 +1,6 @@
 /* This is a CSS file */
 body{
-  position: relative;
+position: relative;
   width: 100%;
   min-height: 100vh;
   background: url("/img/gg/backimage.png")center / cover;
@@ -25,4 +25,7 @@ h1{
 }
 div.b{
   margin: 0 auto;
+}
+div.rslt{
+  text-align: center;
 }
