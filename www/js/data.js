@@ -28,17 +28,19 @@ window.addEventListener('load', (event) => {
   }
 
   //オフライン処理
-  var time = Number(localStorage.getItem("time"));
-  var start_time = Date.now();
-  var end_time = time;
-  if(end_time.getTime != null){
-    var off_time = start_time.getTime() - end_time.getTime();
-    var secs = off_time * 3600;
-    if(secs >= 5){
-      moneybank += 10;
-      localStorage.setItem("moneybank", moneybank);
+    var moneybank = localStorage.getItem("moneybank");
+    var time = Number(localStorage.getItem("time"));
+    var start_time = new Date();
+    var end_time = time;
+    if(end_time.getTime != null){
+      var off_time = start_time.getTime() - end_time.getTime();
+      var diff_time = Math.floor(off_time / (1000 * 60 * 60));
+      alert(diff_time);
+      if(diff_time >= 5){
+        moneybank += 10;
+        localStorage.setItem("moneybank", moneybank);
+      }
     }
-  }
   
   /** mobile backend に保存する **/
   // スコアのインスタンスを生成
