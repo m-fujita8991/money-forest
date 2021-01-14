@@ -31,8 +31,8 @@ window.addEventListener('load', (event) => {
     var time = localStorage.getItem("time");
     var time2 = localStorage.getItem("time2");
     var start = new Date();
-    var a = 0;
-    if (start.getDate() == time) {
+    var a = Number(start.getDate()) - Number(time);
+    if (a == 0) {
       var off_time = start.getHours() - Number(time2);
       if(off_time >= 1){
         for(var i=1; i<=off_time; i++){
