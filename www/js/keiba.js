@@ -83,15 +83,19 @@ document.addEventListener("DOMContentLoaded",function(){
   }
 
   function Val(betmoney){
-    var reg = new RegExp("^[5-9][0-9]{3,}$");
+    var reg = new RegExp("^[1-9][0-9]{0,}$");
     if(!reg.test(betmoney)){
-      alert("掛け金を正しく入力してください");
+      alert("賭金を正しく入力してください");
       return true;
     }
     else{
       var bbb = Number(betmoney);
       moneybank = Number(localStorage.getItem("moneybank"));
-      if(moneybank < bbb){
+      if(bbb < 5000){
+        alert("賭金が少なすぎます");
+        return true;
+      }
+      else if(moneybank < bbb){
         alert("所持金が不足しています");
         return true;
       }
