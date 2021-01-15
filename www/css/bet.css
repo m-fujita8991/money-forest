@@ -7,8 +7,20 @@ body {
 .br{
   width: 150px;
   height: 150px;
+  float: left;
 }
 
+.clear{
+  clear: both;
+}
+
+.kt{
+  font-size: 50px;
+  height: 150px;
+}
+.icon{
+  background-color: white;
+}
 .menu .name, .menu .money{
   display: inline-block;
   background: white;
