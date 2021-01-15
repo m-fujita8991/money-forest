@@ -5,16 +5,12 @@ var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0a
 
 document.addEventListener("DOMContentLoaded",function(){
   var fan = new Audio();
-  var moneybank = Number(localStorage.getItem("moneybank"));
-  moneybank += 10000;
-  localStorage.setItem("moneybank",moneybank);
   var rb = -1;
   var rank = [0,1,2,3,4];
   var betmoney = 0;
   var horsename = ["ジモトダケサラブレッド","タダノウマ","デオチインパクト","クサッタミカン","クロワッサン"];
   fan.src = "sound/keiba/fan.mp3";
-  fan.play(); 
-
+  fan.play();
   document.getElementById("sub").addEventListener("click",function(){
     betmoney = document.getElementById("betmoney");
     rb = document.getElementById("hb").uma.value;
