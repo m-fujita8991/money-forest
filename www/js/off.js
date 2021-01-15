@@ -2,7 +2,8 @@ var applicationKey = "518d2dcf0793d7e878024bfae55edca66fe98d07f37cef22ea14080c51
 
 var clientKey = "0986546d9a7a03b1d7e1c25222ba6694e149405b9b92864d6b263ac8895be0ab";
 
-var time = Number(localStorage.getItem("time"));
+var time = localStorage.getItem("time");
+var time2 = localStorage.getItem("time2");
 
 setInterval(function(){
   // 現在時刻の取得
